@@ -1,0 +1,122 @@
+/* Extra Small Devices, Phones */ 
+@media screen and (max-width: 450px){
+main {
+    width: 95%;
+}
+.onclick-menu-content a {
+    background-color: #333;
+}
+nav {
+    width: 100%;
+    margin-top: 2rem;
+}
+nav a {
+    display: block;
+    margin-bottom: 1rem;
+    background-color: none;
+    background-image: rgb(191,133,133);
+    background-image:  -moz-linear-gradient(-45deg, rgba(191,133,133,1) 12%, rgba(239,126,69,1) 29%, rgba(232,102,37,1) 71%, rgba(255,202,96,1) 100%);
+    background-image: -webkit-linear-gradient(-45deg, rgba(191,133,133,1) 12%,rgba(239,126,69,1) 29%,rgba(232,102,37,1) 71%,rgba(255,202,96,1) 100%);
+    background-image: linear-gradient(135deg, rgba(191,133,133,1) 12%,rgba(239,126,69,1) 29%,rgba(232,102,37,1) 71%,rgba(255,202,96,1) 100%);
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 10px;
+    background-position: 0px;
+}
+header .url {
+    width: 100%;
+    text-align: center;
+}
+header .lang {
+    display: none;
+}
+section p span:first-child {
+    display: block;
+}
+section {
+    height: 350px;
+    background-image: url(img/background1.png), url(img/background2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 200px;
+    background-position: bottom left, bottom right;
+}
+section h1 {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+}
+.skill, .project {
+    width: 130px;
+}
+.about_me img{
+    width: 70%;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer span {
+    display: inline;
+}}
+
+
+
+
+/* Small Devices, Tablets */
+@media screen and (min-width:450px) and (max-width: 800px){
+main {
+    width: 85%;
+}
+.onclick-menu-content a {
+    background-color: #333;
+}
+nav {
+    width: 100%;
+    margin-top: 2rem;
+}
+section p span:first-child {
+    display: block;
+}
+section {
+    height: 400px;
+    background-image: url(img/background1.png), url(img/background2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 200px;
+    background-position: bottom left, bottom right;
+}}
+
+/* Medium Devices, Desktops */
+@media screen and (min-width:801px) and (max-width: 1020px){
+main {
+    width: 70%;
+}
+.onclick-menu-content a {
+    background-color: #333;
+}
+nav {
+    width: 100%;
+    margin-top: 2rem;
+}
+section p span:first-child {
+    display: block;
+}}
+
+/* Medium Devices, Desktops */
+@media screen and (min-width:1021px) and (max-width: 1250px){
+main {
+    width: 55%;
+}}
+
+/* Large Devices, Wide Screens */
+@media screen and (min-width:1251px) and (max-width: 1600px){
+main {
+    width: 45%;
+}}
+
+/* Extra Large Devices, Wide Screens */
+@media screen and (min-width:1601px){
+main {
+    width: 35%;
+}}
+
+@media print {
+
+}
