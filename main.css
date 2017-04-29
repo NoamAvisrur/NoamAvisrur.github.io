@@ -52,6 +52,11 @@ header .url {
     text-decoration: none;
     color: #333;
 }
+
+header .url:hover {
+    background-color: #eee;
+    border-radius: 3px;
+}
 nav {
     width:40%;
     text-align: center;
@@ -63,17 +68,29 @@ nav a{
 }
 nav a, .heb_lang span, .eng_lang span {
     margin: 0px 1rem 0px 1rem;
-    background-image: rgb(191,133,133);
-    background-image:  -moz-linear-gradient(-45deg, rgba(191,133,133,1) 12%, rgba(239,126,69,1) 29%, rgba(232,102,37,1) 71%, rgba(255,202,96,1) 100%);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+nav a:after, .heb_lang span:after, .eng_lang span:after {
+    content: '';
+    display: block;
+    border-radius: 2px;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+nav a:hover:after, .heb_lang span:hover:after, .eng_lang span:hover:after {
+    width: 100%;
+    background-image: -moz-linear-gradient(-45deg, rgba(191,133,133,1) 12%, rgba(239,126,69,1) 29%, rgba(232,102,37,1) 71%, rgba(255,202,96,1) 100%);
     background-image: -webkit-linear-gradient(-45deg, rgba(191,133,133,1) 12%,rgba(239,126,69,1) 29%,rgba(232,102,37,1) 71%,rgba(255,202,96,1) 100%);
     background-image: linear-gradient(135deg, rgba(191,133,133,1) 12%,rgba(239,126,69,1) 29%,rgba(232,102,37,1) 71%,rgba(255,202,96,1) 100%);
-    background-repeat: no-repeat;
-    background-position: -100px;
-    transition: background-position 0.8s , box-shadow 0.8s;
 }
+
 nav a:hover, .heb_lang span:hover, .eng_lang span:hover {
-    background-position: 0px; 
-    box-shadow: 3px 3px 10px;
     cursor: pointer;
 }
 header .heb_lang, .eng_lang {
@@ -107,6 +124,8 @@ main {
     transition: opacity 2s
 } 
 .about_me span:first-child, .skills > span, .projects > span, .contact > span {
+    padding: 3px;
+    border-radius: 3px;
     box-shadow: 3px 3px 10px;
     background: rgb(191,133,133);
     background:  -moz-linear-gradient(-45deg, rgba(191,133,133,1) 12%, rgba(239,126,69,1) 29%, rgba(232,102,37,1) 71%, rgba(255,202,96,1) 100%);
@@ -141,22 +160,26 @@ main {
     font-weight: bold;
     color: #333;
 }
+.project > span {
+    padding: 0.5rem 0px 0.5rem 0px;
+}
+.profile span {
+    padding-bottom: 0.5rem;
+}
 .skill img {
     width: 45px;
     margin-top: 5px;
-    transition: width 1s;
+    transition: transform 1s;
 }
 .project img, .profile img {
    width: 35px;
-   margin-top: 10px;
-   transition: width 1s;
+   transition: transform 1s;
 }
 .skill:hover img {
-    width: 55px;  
+    transform: scale(1.3);  
 }
 .project:hover img, .profile:hover img {
-    width: 42px;
-
+    transform: scale(1.25);
 }
 .contact p img {
     width: 50px;
